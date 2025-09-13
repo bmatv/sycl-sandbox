@@ -14,3 +14,6 @@ find_package(IntelSYCL REQUIRED)
 add_executable(hello src/hello.cpp)
 # link SYCL
 target_link_libraries(hello IntelSYCL::SYCL_CXX)
+
+add_executable(check_devices src/check_devices.cpp)
+target_link_libraries(check_devices IntelSYCL::SYCL_CXX)
