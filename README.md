@@ -11,6 +11,12 @@ and source the setvars script to setup the environment:
 ```
 source /opt/intel/oneapi/setvars.sh
 ```
+setting up variables is needed to able to find devices, without it hello returns:
+```
+terminate called after throwing an instance of 'sycl::_V1::exception'
+  what():  No device of requested type available. Please check https://software.intel.com/content/www/us/en/develop/articles/intel-oneapi-dpcpp-system-requirements.html
+Aborted                    (core dumped) ./build/hello
+```
 
 This will only pick up FPGA and CPU. To get the GPU, one needs to install
 
